@@ -1,0 +1,7 @@
+author: topfunky
+summary: Creates a dom_id method for generating 
+homepage: http://codefluency.com/articles/2006/05/30/rails-views-dom-id-scheme
+#plugin: http://topfunky.net/svn/plugins/plugin_test
+license: MIT
+version: 0.1
+rails_version: 1.0+
