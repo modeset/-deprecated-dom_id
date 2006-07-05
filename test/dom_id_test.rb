@@ -11,6 +11,14 @@ class DomIdTest < Test::Unit::TestCase
   def test_people_thing
     pt = PeopleThing.find :first
     assert_equal 'people_thing_1', pt.dom_id
+    
+    assert_equal 'many_people_thing_1', pt.dom_id('many')
+  end
+  
+  def test_new
+    pt = PeopleThing.new
+    assert_equal 'people_thing_new', pt.dom_id
+    assert_equal 'many_people_thing_new', pt.dom_id('many')
   end
   
 end

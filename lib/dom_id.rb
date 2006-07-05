@@ -11,8 +11,8 @@ module DomId
   # 
   def dom_id(prefix=nil)
     display_id = new_record? ? "new" : id
-    prefix ||= self.class.name.underscore
-    prefix != :bare ? "#{prefix.to_s.gsub(/\s+/, '_')}_#{display_id}" : display_id
+    prefix = prefix.nil? ? self.class.name.underscore : "#{prefix}_#{self.class.name.underscore}"
+    "#{prefix}_#{display_id}"
   end
 
 end
