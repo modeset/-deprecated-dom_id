@@ -1,5 +1,7 @@
 module DomId
 
+  VERSION='0.1.0'
+
   ##
   # Implementation of http://codefluency.com/articles/2006/05/30/rails-views-dom-id-scheme
   #

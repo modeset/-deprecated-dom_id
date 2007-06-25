@@ -1,6 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + "/test_helper")
 
-class DomIdTest < Test::Unit::TestCase
+class TestDomId < Test::Unit::TestCase
   fixtures :things, :people_things
 
   def test_dom_id
