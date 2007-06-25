@@ -1,18 +1,24 @@
 require File.expand_path(File.dirname(__FILE__) + "/test_helper")
 
+class Thing < ActiveRecord::Base
+  
+  def new_record?; false; end
+  
+  def id; 1; end
+  
+end
+
+class PeopleThing < ActiveRecord::Base
+
+  def new_record?; true; end
+  
+end
+
 class TestDomId < Test::Unit::TestCase
-  fixtures :things, :people_things
 
   def test_dom_id
-    thing = Thing.find :first
+    thing = Thing.new
     assert_equal 'thing_1', thing.dom_id
-  end
-
-  def test_people_thing
-    pt = PeopleThing.find :first
-    assert_equal 'people_thing_1', pt.dom_id
-    
-    assert_equal 'many_people_thing_1', pt.dom_id('many')
   end
   
   def test_new
