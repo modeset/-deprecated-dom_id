@@ -6,7 +6,7 @@ about.yml
 init.rb
 lib/dom_id.rb
 test/database.yml
-test/dom_id_test.rb
+test/test_dom_id.rb
 test/fixtures/people_thing.rb
 test/fixtures/people_things.yml
 test/fixtures/thing.rb
